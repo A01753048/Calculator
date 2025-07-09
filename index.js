@@ -122,6 +122,9 @@ function handleButtonClick(symbol) {
     resultField.classList.remove("result-shown");
     inputField.classList.remove("result-shown");
     if (symbol === "<=") {
+        if (userInput.at(userInput.length - 1) === ".") {
+            dotAvailable = true;
+        }
         userInput = userInput.substring(0, userInput.length-1);
         if (userInput.length === 0) {
             validateInput(" ");
