@@ -57,12 +57,12 @@ parseInput = (input) => {
                 if (i === 0) {
                     lhsNum = convertedInput.substring(0, indexes[i]);
                     res = (Number(lhsNum) / 100).toString();
-                    convertedInput = res + convertedInput.substring(indexes[i] + 1, convertedInput.length);
+                    convertedInput = res + convertedInput.substring(indexes[i]+1, convertedInput.length);
                     break;
                 }
                 lhsNum = convertedInput.substring(indexes[i-1]+1, indexes[i]);
                 res = (Number(lhsNum) / 100).toString();
-                convertedInput = convertedInput.substring(0, indexes[i-1]+1) + res + convertedInput.substring(indexes[i+1], convertedInput.length);
+                convertedInput = convertedInput.substring(0, indexes[i-1]+1) + res + convertedInput.substring(indexes[i]+1, convertedInput.length);
                 console.log(convertedInput);
                 break;
             }
@@ -233,3 +233,15 @@ function validateInput(symbol) {
         return true;
     }
 }
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Backspace" || e.key === "Delete") {
+        handleButtonClick("<=");
+        return;
+    }
+    if (e.key === "Enter") {
+        handleButtonClick("=")
+        return;
+    }
+    handleButtonClick(e.key);
+});
