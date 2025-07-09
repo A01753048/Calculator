@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Bitcount+Grid+Double:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*,
+*::before,
+*::after,
+*:before,
+*:after {
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+}
+
+#case {
+    margin: 10vh auto;
+    padding: 25px;
+    height: 630px;
+    width: 400px;
+    border: black solid 2px;
+    border-radius: 10px;
+    box-shadow: #000000 4px 4px;
+    position: relative;
+    background-color: #363535;
+    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+
+}
+
+#make {
+    color: white;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-family: "Birthstone", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+#screen {
+    margin: 15px auto 30px;
+    width: 95%;
+    height: 130px;
+    border: black solid 2px;
+    border-radius: 10px;
+    background-color: lightblue;
+
+}
+
+.screen-font {
+    font-family: "Bitcount Grid Double", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+#input {
+    height: 40%;
+    width: 100%;
+    overflow: visible;
+    overflow-wrap: break-word;
+    text-align: right;
+    padding: 5px;
+    font-size: 2rem;
+    line-height: 1.3rem;
+}
+
+#result-container {
+    height: 60%;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#screen-equals {
+    width: 5%;
+    font-size: 1.3rem;
+}
+
+#result {
+    overflow: scroll;
+    text-align: right;
+    font-size: 3rem;
+    opacity: 40%;
+}
+
+#result.result-shown {
+    opacity: 100%;
+}
+
+#input.result-shown {
+    opacity: 40%;
+}
+
+#buttons {
+    display: grid;
+    margin: 0 auto;
+    grid-gap: 20px 10px;
+    grid-template-areas:
+        "AC erase percentage division"
+        "seven eight nine multiplication"
+        "four five six minus"
+        "one two three plus"
+        "doubleZero Zero dot equals";
+}
+
+#AC {
+    grid-area: AC;
+}
+
+#erase {
+    grid-area: erase;
+}
+
+#percentage {
+    grid-area: percentage;
+}
+
+#division {
+    grid-area: division;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#multiplication {
+    grid-area: multiplication;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#doubleZero {
+    grid-area: doubleZero;
+}
+
+#Zero {
+    grid-area: Zero
+}
+
+#dot {
+    grid-area: dot;
+}
+
+#equals {
+    grid-area: equals;
+}
+
+.operator, .number {
+    height: 65px;
+    width: 65px;
+    margin: 0 auto;
+    border: gray;
+    border-radius: 40px;
+    font-size: 1.8em;
+    background-color: #464646;
+    color: white;
+    box-shadow: black 3px 3px;
+}
+
+.operator.top {
+    background-color: #7c7c7c;
+}
+
+.operator.right {
+    background-color: orange;
+}
+
+.operator:active , .number:active {
+    transform: translate(3px, 3px);
+    box-shadow: revert;
+}
